@@ -1,22 +1,48 @@
 package com.journalApp.Umang.journalApp.controller;
 
 import com.journalApp.Umang.journalApp.entity.JournalEntry;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// Tells Spring that this class is a REST Controller
 @RestController
+
+// Base URL for this controller will be /journal
 @RequestMapping("/journal")
 public class JournalEntryController {
-    private Map<Long, JournalEntry> journalEntryMap = new HashMap<>();
 
+    // HashMap is used to store JournalEntry objects temporarily
+    // Long = ID of journal entry
+    // JournalEntry = complete journal object
+    private Map<Long, JournalEntry> journalEntries = new HashMap<>();
+
+    // Handles GET request
+    // URL: GET /journal
     @GetMapping
     public List<JournalEntry> getAll(){
-        return new ArrayList<>(journalEntryMap.values());
+
+        // journalEntries.values() gets all journal entries
+        // ArrayList converts them into a List
+        return new ArrayList<>(journalEntries.values());
     }
 
+    // Handles POST request
+    // URL: POST /journal
+    @PostMapping
+    public Boolean createEntry(
+            // Converts incoming JSON data into JournalEntry object
+            @RequestBody JournalEntry myEntry){
+
+        // Stores journal entry in HashMap
+        // Key = journal entry ID
+        // Value = complete JournalEntry object
+        journalEntries.put(myEntry.getId(), myEntry);
+
+        // Returns true after adding the entry
+        return true;
+    }
 }
