@@ -45,4 +45,19 @@ public class JournalEntryController {
         // Returns true after adding the entry
         return true;
     }
-}
+    // Handles GET request
+    @GetMapping
+    public JournalEntry getEntry(
+
+            // Gets the "id" value from URL
+            // Example: /journal?id=1
+            // Here id will be 1
+            @RequestParam Long id){
+
+        // Finds the JournalEntry from HashMap using the given id
+        // Example: journalEntries.get(1)
+        return journalEntries.get(id);
+    }
+
+
+}   
