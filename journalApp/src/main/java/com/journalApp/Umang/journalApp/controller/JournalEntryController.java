@@ -47,10 +47,10 @@ public class JournalEntryController {
     }
     // Handles GET request
     @GetMapping("/id/{id}")
-    public JournalEntry getEntry(
+    public JournalEntry getJournalEntry(
 
             // Gets the "id" value directly from the URL path
-            // Example: /journal/id/1
+            // Example: /journal/idf/1
             // Here id will be 1
             @PathVariable Long id){
 
@@ -58,7 +58,22 @@ public class JournalEntryController {
         // Example: journalEntries.get(1)
         return journalEntries.get(id);
     }
+    // Handles DELETE request
+// Example URL: DELETE /journal/id/1
+    @DeleteMapping("/id/{id}")
+    public JournalEntry deleteJournalEntry(
 
+            // Gets the id from the URL path
+            // Example: /journal/id/1
+            // Here id = 1
+            @PathVariable Long id){
 
+        // Removes the JournalEntry with this id from the HashMap
+        return journalEntries.remove(id);
+    }
+    @PutMapping("/id/{id}")
+    public JournalEntry UpdateJournalEntry(@PathVariable Long id , @RequestBody  JournalEntry myEntry){
+        return journalEntries.put(id, myEntry);
+    }
 
 }   
