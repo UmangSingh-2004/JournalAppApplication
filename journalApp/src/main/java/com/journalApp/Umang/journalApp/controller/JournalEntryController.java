@@ -71,9 +71,21 @@ public class JournalEntryController {
         // Removes the JournalEntry with this id from the HashMap
         return journalEntries.remove(id);
     }
+    // Handles PUT request
+// Example URL: PUT /journal/id/1
     @PutMapping("/id/{id}")
-    public JournalEntry UpdateJournalEntry(@PathVariable Long id , @RequestBody  JournalEntry myEntry){
+    public JournalEntry UpdateJournalEntry(
+
+            // Gets the id from the URL path
+            // Example: /journal/id/1
+            // Here id = 1
+            @PathVariable Long id,
+
+            // Converts the JSON request body into a JournalEntry object
+            @RequestBody JournalEntry myEntry){
+
+        // Replaces the old JournalEntry with the new JournalEntry
+        // IMPORTANT: put() returns the OLD JournalEntry, not the new one
         return journalEntries.put(id, myEntry);
     }
-
 }   
