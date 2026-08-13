@@ -49,8 +49,8 @@ public class JournalEntryController {
     @GetMapping("/id/{id}")
     public JournalEntry getEntry(
 
-            // Gets the "id" value from URL
-            // Example: /journal?id=1
+            // Gets the "id" value directly from the URL path
+            // Example: /journal/id/1
             // Here id will be 1
             @PathVariable Long id){
 
@@ -58,6 +58,7 @@ public class JournalEntryController {
         // Example: journalEntries.get(1)
         return journalEntries.get(id);
     }
+
 
 
 }   
