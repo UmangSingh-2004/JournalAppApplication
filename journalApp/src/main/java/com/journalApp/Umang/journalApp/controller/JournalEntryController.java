@@ -89,4 +89,3 @@ public class JournalEntryController {
         return journalEntries.put(id, myEntry);
     }
 }
-2332
