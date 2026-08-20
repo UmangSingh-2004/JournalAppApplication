@@ -2,7 +2,7 @@ package com.journalApp.Umang.journalApp.entity;
 
 public class JournalEntry {
     private long id;
-
+//Umang Singh
     public long getId() {
         return id;
     }
