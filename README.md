@@ -72,3 +72,62 @@ Example Response:
 "content": "Today I learned how REST APIs work."
 }
 ]
+3. Get Journal Entry by ID
+
+GET
+
+/journal/id/{id}
+
+Example:
+
+GET /journal/id/1
+4. Update Journal Entry
+
+PUT
+
+/journal/id/{id}
+
+Example Request:
+
+{
+"id": 1,
+"title": "Spring Boot Practice",
+"content": "Updated my journal entry."
+}
+5. Delete Journal Entry
+
+DELETE
+
+/journal/id/{id}
+
+Example:
+
+DELETE /journal/id/1
+▶️ How to Run the Project
+1. Clone the Repository
+   git clone https://github.com/UmangSingh-2004/JournalAppApplication.git
+2. Open the Project
+
+Open the project using IntelliJ IDEA or another Java IDE.
+
+3. Run the Application
+
+Run:
+
+JournalApplication.java
+
+Or use Maven:
+
+mvn spring-boot:run
+4. Test the API
+
+You can test the endpoints using:
+
+Postman
+IntelliJ HTTP Client
+cURL
+Browser for GET requests
+
+The application will run on:
+
+http://localhost:8080
