@@ -29,6 +29,4 @@ public class JournalEntry {
 
     private String name;
     private  String content;
-
 }
-//Umang Singh
