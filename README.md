@@ -131,3 +131,76 @@ Browser for GET requests
 The application will run on:
 
 http://localhost:8080
+
+🧠 Concepts Practiced
+
+This project helped me practice:
+
+Spring Boot project structure
+REST API development
+CRUD operations
+@RestController
+@RequestMapping
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+@PathVariable
+@RequestBody
+Java Collections
+HTTP methods
+JSON request/response handling
+Git and GitHub
+🔮 Future Improvements
+
+The project is currently being improved with additional backend features.
+
+Planned features include:
+
+MongoDB / PostgreSQL database integration
+
+Spring Data JPA
+
+Repository layer
+
+Service layer
+
+DTO implementation
+
+Input validation
+
+Global exception handling
+
+User registration and login
+
+Spring Security
+
+JWT authentication
+
+User-specific journal entries
+
+Pagination and sorting
+
+Swagger / OpenAPI documentation
+
+Unit testing with JUnit and Mockito
+
+Docker support
+
+Cloud deployment
+
+🎯 Project Goal
+
+The goal of this project is to strengthen my Java Backend Development skills and understand how production-style applications are developed using Spring Boot.
+
+The project will gradually evolve from a basic CRUD application into a complete backend application with authentication, database integration, validation, testing, and deployment.
+
+👨‍💻 Author
+
+Umang Singh
+
+GitHub: UmangSingh-2004
+
+⭐ Support
+
+If you find this project useful, feel free to give it a ⭐ on GitHub.
