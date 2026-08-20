@@ -6,7 +6,7 @@ public class JournalEntry {
     public long getId() {
         return id;
     }
-
+//ITz me bro
     public void setId(long id) {
         this.id = id;
     }
